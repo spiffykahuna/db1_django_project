@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: django-smart-selects
+Version: 1.0.4
+Summary: Django application to handle chained model fields.
+Home-page: UNKNOWN
+Author: Patrick Lauber
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

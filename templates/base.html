@@ -1,0 +1,130 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <META NAME="TITLE" CONTENT="Almaz car - Keretööd ja värvimine">
+    <META NAME="DESCRIPTION" CONTENT="Almaz car - Keretööd ja värvimine">
+    <META NAME="KEYWORDS" CONTENT="auto,autod,keretööd,keretöö,remont,remond,auto remont,värvimine,varvimine,auto värv">
+    <META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+    <META NAME="REVISIT-AFTER" CONTENT="1 weeks">
+    <link rel="shortcut Icon" href="http://127.0.0.1:8000/static/siteimg/favicon.ico" />
+    <link rel="stylesheet" href="http://127.0.0.1:8000/static/style.css"/>    
+
+    <title>{% block page_title %}Almaz car{% endblock %}</title>
+</head>
+
+<body class="body">
+
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="70%" align="right" bgcolor="#000000">
+    
+      <div  id="header">
+	    {% block header %}
+	    <a href="{% url index %}">{% trans "Home" %}</a> | 
+
+	    {% if user.is_authenticated %}
+	    {% trans "Logged in" %}: {{ user.username }} 
+	    (<a href="{% url auth_logout %}">{% trans "Log out" %}</a> | 
+	    <a href="{% url auth_password_change %}">{% trans "Change password" %}</a>)
+	    {% else %}
+	    <a href="{% url auth_login %}">{% trans "Log in" %}</a>
+	    {% endif %}
+	    
+	    {% endblock %}
+      </div>
+    </td>
+    <!--<td height="30" bgcolor="#000000">&nbsp;&nbsp;&nbsp;<a href="index_rus.php"><font color="#ffffff">rus</font></a></td>
+    -->
+  </tr>
+  <tr>
+    <td align="center" background="http://127.0.0.1:8000/static/siteimg/topbg.jpg"><img src="http://127.0.0.1:8000/static/siteimg/top.jpg"></td>
+  </tr>
+  <tr>
+      <td align="center">
+	  {% block link_table %}
+	  <table class="link_table_text" cellpadding="00">
+	    <tr>
+		<td width="130"><a href="/">{% trans "Home" %}</a></td>
+		<td width="130"><a href="/">{% trans "Gallery" %}</a></td>
+		<td width="150"><a href="/">{% trans "Prices" %}</a></td>
+		<td width="150"><a href="/shop">{% trans "Part Shop" %}</a></td>
+		<td width="130"><a href="/contact">{% trans "Contact" %}</a></td>
+		{% if user.is_authenticated %}
+		<td width="130"><a href="/shop/favourites">{% trans "Favourites" %}</a></td>
+		<td width="130"><a href="/shop/user_parts" title="Parts for my car model">{% trans "My parts" %}</a></td>
+		<td width="130"><a href="/shop/user_profile">{% trans "Profile" %}</a></td> 
+		{% endif %}
+
+	    </tr>
+	  </table>
+	  {% endblock %}
+      </td>
+  </tr>
+  <tr>
+      <td height="20"></td>
+  </tr>
+</table>
+
+<table align="center" width="90%" cellpadding="0" cellspacing="0">
+  <tr>
+	  <td width="13"><img src="http://127.0.0.1:8000/static/siteimg/table_l.jpg"></td>
+	  <td width="" background="http://127.0.0.1:8000/static/siteimg/table_t.jpg">{{ table_heading}}</td>
+	  <td width="13"><img src="http://127.0.0.1:8000/static/siteimg/table_r.jpg"></td>
+  </tr>
+  <tr>
+	  <td width="13" background="http://127.0.0.1:8000/static/siteimg/table_lm.jpg"></td>
+	  <td>
+	      <table class="bodytable">
+		  <tr>
+		      <td colspan="3" height="20"></td>
+		  </tr>	
+
+		  <tr>	 
+		      <div id="content">     
+			{% block content %}{% endblock %}      
+		      </div>
+		  </tr>
+
+		  <tr><td colspan="3" height="20"></td></tr>
+		  <tr><td colspan="3">
+	  
+	      </table>
+	  </td>
+	  <td width="13"background="http://127.0.0.1:8000/static/siteimg/table_rm.jpg"></td>
+  </tr>
+  <tr>
+	  <td width="13"><img src="http://127.0.0.1:8000/static/siteimg/table_lb.jpg"></td>
+	  <td width="100%" background="http://127.0.0.1:8000/static/siteimg/table_b.jpg"></td>
+	  <td width="13"><img src="http://127.0.0.1:8000/static/siteimg/table_rb.jpg"></td>
+  </tr>
+</table>
+
+
+<div>
+
+
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td height="40" align="center" width="97%"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&copy 2000-{% now "Y" %} Almaz car O&Uuml;</font></td>
+
+</tr>
+</table>
+<div>
+
+
+    
+
+    
+
+    <div id="footer">
+        {% block footer %}
+        <hr />
+        {% endblock %}
+    </div>
+</body>
+
+</html>

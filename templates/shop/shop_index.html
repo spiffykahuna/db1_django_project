@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/shop/shop_logic.js"></script>
+
+
+
+
+<form id="search_form" action="javascript:" method="post">
+   
+   <select class="selector" id="mark_select" size="0"  name="mark_select"></select>
+   <div id="selectors" name="selectors"></div>
+   <p><input type="submit" value="Search"></p>
+</form>
+<div id="search_response" name="search_response"></div>
+{% endblock %}
+

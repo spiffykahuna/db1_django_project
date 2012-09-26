@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+    <td>
+	Contact Us
+	{% if form.errors %}
+	<h2 class="errors">
+	    Please correct the highlighted field{{ form.errors|pluralize }} below and resubmit.
+	</h2>
+	{% endif %}
+    </td>
+<tr>
+<td>
+<form action="/contact/" method="post">
+    {{ form.non_field_errors }}
+    {% csrf_token %}
+    <table id="contact_form_table">
+	
+	    <tr><td>{{ form.name.errors }}</td></tr>
+	    <tr>
+		<td><label for="id_name">Your name:</label></td>
+		<td>{{ form.name }}</td>
+	    </tr>
+	    
+	    <tr><td>{{ form.email.errors }}</td></tr>
+	    <tr>
+		<td><label for="id_email">Your email address:</label></td>
+		<td>{{ form.email }}</td>
+	    </tr>
+	  
+	    <tr><td>{{ form.body.errors }}</td></tr>
+	    <tr><td><label for="id_email">Your message:</label></td><td>{{ form.body }}</td></tr>
+	    
+		    
+	    
+	
+	<tr><td></td><td ><p><input type="submit" value="Send message" /></p></td></tr>
+    </table>
+</form>
+</td>
+</tr>
+
+{% endblock %}
+

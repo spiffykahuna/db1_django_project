@@ -1,0 +1,14 @@
+MANIFEST.in
+setup.py
+django_smart_selects.egg-info/PKG-INFO
+django_smart_selects.egg-info/SOURCES.txt
+django_smart_selects.egg-info/dependency_links.txt
+django_smart_selects.egg-info/top_level.txt
+smart_selects/__init__.py
+smart_selects/db_fields.py
+smart_selects/form_fields.py
+smart_selects/models.py
+smart_selects/urls.py
+smart_selects/utils.py
+smart_selects/views.py
+smart_selects/widgets.py

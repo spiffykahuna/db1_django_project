@@ -1,0 +1,101 @@
+#header {
+	font: bold 100%/100% "Lucida Grande", Arial, sans-serif;
+	color: #FFF;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0.5px;	
+}
+#header  a {
+	font: bold 100%/100% "Lucida Grande", Arial, sans-serif;
+	color: #FFF;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0.5px;	
+}
+
+
+.body {  font-family: Verdana, Arial, Helvetica, sans-serif;
+	 background-color: #4c9ccf;
+	 width: 100%;
+	 margin-top: 0px;
+	 margin-right: 0px;
+	 margin-bottom: 0px;
+	 margin-left: 0px;
+	 text-align: center;
+	 color: #000066;
+  
+}
+
+.bodytable {  
+  width: 100%;
+  font-family: Geneva, Arial, Helvetica, san-serif;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: center;
+  background-color: #c1c8d8;
+  padding-bottom: 20px;
+  vertical-align: top;
+  
+}
+#content {  
+  width: 93%;
+  font-family: Geneva, Arial, Helvetica, san-serif;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: center;
+  background-color: #c1c8d8;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  vertical-align: top;
+  
+}
+
+#contact_form_table {
+  width: 100%;
+  font-family: Geneva, Arial, Helvetica, san-serif;
+  padding-right: 40px;
+  padding-left: 40px;
+  text-align: center;
+  background-color: #c1c8d8;
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+
+
+.link_table_text {
+	font: bold 100%/100% "Lucida Grande", Arial, sans-serif;
+	color: #FFF;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: 0.5px;	
+}
+.link_table_text  a {
+	font: bold 100%/100% "Lucida Grande", Arial, sans-serif;
+	color: #FFF;
+	margin: 0;
+	padding: 0px 0px 0px 0px;
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: 0.5px;	
+}
+.link_table_text a:link {text-decoration:none;}    /* unvisited link */
+.link_table_text a:visited {text-decoration:none;} /* visited link */
+.link_table_text a:hover {text-decoration:underline;}   /* mouse over link */
+.link_table_text a:active {text-decoration:underline;}  /* selected link */
+
+.selector{
+    width: 200px;
+    /* border:1px solid red; */
+    border: 2px solid #4c9ccf;
+}
+
+
+
+/* .photo {  background-image: url(siteimg/pshadow.jpg); background-repeat: no-repeat; background-position: center; text-align: center; vertical-align: top; height: 161px}
+*/

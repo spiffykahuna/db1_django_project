@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/shop/shop_logic.js"></script>
+<script type="text/javascript" src="/static/shop/shop_user_profile.js"></script>
+
+
+{% if message %}
+  {{ message|safe }}
+{% endif %}
+<form method="post" action=".">
+  {{ form.as_p }}
+
+  <input type="submit" value="{% trans 'Submit' %}" />
+</form>
+{% endblock %}

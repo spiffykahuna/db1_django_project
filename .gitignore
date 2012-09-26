@@ -1,0 +1,7 @@
+
+*.pyc
+*~
+shop/sql
+books
+car_information
+
