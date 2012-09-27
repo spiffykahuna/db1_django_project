@@ -3,20 +3,14 @@ from django.conf.urls.defaults import *
 
 from views import *
 
-from books import views as books_views
+
 from contact import views as contact_view
 
-from books.views import about_pages
+
 from django.views.generic.simple import direct_to_template
 
 
 from django.views.generic import list_detail
-from books.models import Publisher
-from books.models import Book
-
-from books.views import author_detail
-
-
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -36,26 +30,14 @@ from django.conf import settings
 from db1_django_project.shop.views import image_view
 admin.autodiscover()
 
-publisher_info = {
-    'queryset': Publisher.objects.all(),
-    'template_name': 'publisher_list_page.html',
-    'template_object_name': 'publisher',
-}
-
-book_info = {
-    'queryset': Book.objects.order_by('-publication_date'),
-}
 
 urlpatterns = patterns('',                       
     (r'^admin/', include(admin.site.urls)),
     (r'^about/$', direct_to_template, {
                                        'template': 'about.html'
                                        }
-     ),
-    (r'^about/(\w+)/$', about_pages),
-    (r'^publishers/$', list_detail.object_list, publisher_info),
-    (r'^books/$', list_detail.object_list, book_info),
-    (r'^authors/(?P<author_id>\d+)/$', author_detail),
+     ),   
+    
     (r'^register/$', register),
     # registration
     (r'^accounts/', include('registration.backends.custom.urls')),    
